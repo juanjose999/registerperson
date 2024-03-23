@@ -1,37 +1,38 @@
 package com.register.person;
 
+import com.register.person.models.Register;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class FakeDataRegister {
-    public static Resgister registerNew(){
-        Resgister resgister = new Register();
-        resgister.setIdRegister("1");
-        resgister.setName("holman morris");
-        resgister.setIdCC("323224555");
-        resgister.setRazon("conferencia");
-        resgister.setFecha(LocalDateTimes.now());
-        return resgister;
+    public static Register registerNew(){
+        Register register = new Register();
+        register.setIdRegister("1");
+        register.setFullNamePerson("holman morris");
+        register.setIdCardNumber("323224555");
+        register.setReasonForEntry("conferencia");
+        register.setHourEntry("2024-03-12");
+        return register;
     }
     public static List<Register> registerList(){
-        Resgister resgister2 = new Register();
-        resgister.setIdRegister("2");
-        resgister.setName("Maria carbajal");
-        resgister.setIdCC("322424244");
-        resgister.setRazon("aseo general");
-        resgister.setFecha(LocalDateTimes.now());
-        return resgister;
+        Register register2 = new Register();
+        register2.setIdRegister("2");
+        register2.setFullNamePerson("Maria carolina");
+        register2.setIdCardNumber("323224555");
+        register2.setReasonForEntry("Aseo");
+        register2.setHourEntry("2024-03-12");
 
-        Resgister resgister3 = new Register();
-        resgister.setIdRegister("3");
-        resgister.setName("Luis orlando dias");
-        resgister.setIdCC("3332342342");
-        resgister.setRazon("tecnologia");
-        resgister.setFecha(LocalDateTimes.now());
-        return resgister;
+        Register register3 = new Register();
+        register3.setIdRegister("3");
+        register3.setFullNamePerson("Alicia ordas");
+        register3.setIdCardNumber("323224555");
+        register3.setReasonForEntry("Tecnologia");
+        register3.setHourEntry("2024-03-12");
 
         List<Register> registerList = new ArrayList<>();
-        registerList.add(resgister2);
-        registerList.add(resgister3);
+        registerList.add(register2);
+        registerList.add(register3);
         return registerList;
     }
 }
