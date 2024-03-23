@@ -10,5 +10,5 @@ public interface RegisterService {
     Optional<Register> findRegisterById(String idRegister);
     Register saveRegister(Register register);
     Register updateRegister(String idRegister, Register register);
-    Boolean deleteRegister (String idRegister);
+    Boolean deleteRegisterById (String idRegister);
 }

@@ -34,7 +34,7 @@ public class RegisterServiceImpl implements RegisterService{
     }
 
     @Override
-    public Boolean deleteRegister(String idRegister) {
-        return registerRepository.deleteRegister(idRegister);
+    public Boolean deleteRegisterById(String idRegister) {
+        return registerRepository.deleteRegisterById(idRegister);
     }
 }

@@ -41,7 +41,7 @@ public class RegisterRepositoryImpl implements RegisterRepository{
     }
 
     @Override
-    public Boolean deleteRegister(String idRegister) {
+    public Boolean deleteRegisterById(String idRegister) {
         Optional<Register> findRegister = registerRepositoryMongo.findById(idRegister);
         if(findRegister.isPresent()){
             registerRepositoryMongo.delete(findRegister.get());

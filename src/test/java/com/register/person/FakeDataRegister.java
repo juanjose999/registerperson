@@ -12,7 +12,7 @@ public class FakeDataRegister {
         register.setFullNamePerson("holman morris");
         register.setIdCardNumber("323224555");
         register.setReasonForEntry("conferencia");
-        register.setHourEntry("2024-03-12");
+        register.setHourEntry("2024-03-23 : 10:15");
         return register;
     }
     public static List<Register> registerList(){
@@ -21,14 +21,14 @@ public class FakeDataRegister {
         register2.setFullNamePerson("Maria carolina");
         register2.setIdCardNumber("323224555");
         register2.setReasonForEntry("Aseo");
-        register2.setHourEntry("2024-03-12");
+        register2.setHourEntry("2024-03-23 : 10:15");
 
         Register register3 = new Register();
         register3.setIdRegister("3");
         register3.setFullNamePerson("Alicia ordas");
         register3.setIdCardNumber("323224555");
         register3.setReasonForEntry("Tecnologia");
-        register3.setHourEntry("2024-03-12");
+        register3.setHourEntry("2024-03-23 : 10:15");
 
         List<Register> registerList = new ArrayList<>();
         registerList.add(register2);

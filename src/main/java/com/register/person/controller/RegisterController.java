@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/register")
@@ -19,9 +20,23 @@ public class RegisterController {
     public ResponseEntity<List<Register>> getAllRegister(){
         return  new ResponseEntity<>(registerService.getAllRegister(), HttpStatus.OK);
     }
+    @GetMapping("/{idRegister}")
+    public ResponseEntity<Register> findRegisterById(@PathVariable String idRegister){
+        return new ResponseEntity(registerService.findRegisterById(idRegister),HttpStatus.OK);
+    }
 
-    @PostMapping("/save-register")
+    @PostMapping("/{save-register}")
     public ResponseEntity<Register> saveRegister(@RequestBody Register register){
         return new ResponseEntity<>(registerService.saveRegister(register), HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{idRegister}")
+    public ResponseEntity<Register> updateRegister(@PathVariable String idRegister, @RequestBody Register register){
+        return new ResponseEntity<>(registerService.updateRegister(idRegister, register),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/{idRegister}")
+    public ResponseEntity<Boolean> deleteRegister(@PathVariable String idRegister){
+       return new ResponseEntity<>(registerService.deleteRegisterById(idRegister),HttpStatus.OK);
     }
 }
